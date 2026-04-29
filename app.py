@@ -6,6 +6,10 @@ app = Flask(**name**)
 
 model = tf.keras.models.load_model("model.h5")
 
+@app.route("/")
+def home():
+return "API calisiyor"
+
 @app.route("/predict", methods=["POST"])
 def predict():
 data = request.json
@@ -18,5 +22,3 @@ return jsonify({
     "result": prediction.tolist()
 })
 ```
-
-app.run(host="0.0.0.0", port=10000)
