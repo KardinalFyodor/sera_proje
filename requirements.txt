@@ -1,4 +1,4 @@
-flask
-tensorflow
+flask==3.0.0
 numpy
+tensorflow-cpu==2.15.0
 gunicorn
